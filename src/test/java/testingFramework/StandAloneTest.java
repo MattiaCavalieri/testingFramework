@@ -68,29 +68,37 @@ public class StandAloneTest {
 		// Once landend on Cart page let's scan all of the products to see if there is
 		// the right product
 		List<WebElement> productsInCart = driver.findElements(By.cssSelector(".cartSection h3"));
-		// we use anyMatch to find any product that matches with our product name and store it in a boolean variable
+		// we use anyMatch to find any product that matches with our product name and
+		// store it in a boolean variable
 		Boolean match = productsInCart.stream()
 				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
 		// eventually we use an assertion to validate the test
 		Assert.assertTrue(match);
-		
+
 		// go to Checkout
 		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
+
 		// Select Country and place Order
 		// Using actions we insert "Italy" in country field
 		Actions action = new Actions(driver);
-		action.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "Italy").build().perform();
-		
+		action.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "Italy").build()
+				.perform();
+
 		// we use explicit wait to let the list to be shown
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-		
+
 		// click on the suggested country to confirm selection
 		driver.findElement(By.cssSelector(".ta-item")).click();
-		
+
 		// click on Place Order
 		driver.findElement(By.cssSelector(".action__submit")).click();
 
+		// grab the order number
+		String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+		
+		// close the browser
+		driver.quit();
 	}
 
 }
