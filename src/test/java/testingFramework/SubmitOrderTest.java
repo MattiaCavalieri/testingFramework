@@ -13,10 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import testingFramework.pageobject.LandingPage;
 
-public class StandAloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) {
 
@@ -31,16 +30,11 @@ public class StandAloneTest {
 		// maximise the browser
 		driver.manage().window().maximize();
 
-		// connect to shop site
-		driver.get("https://rahulshettyacademy.com/client/");
-
-		// login using account credentials: --
 		LandingPage landingPage = new LandingPage(driver);
-		driver.findElement(By.id("userEmail")).sendKeys("mattiacavalieri@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("R1verside.2025!");
-
-		// click on "Login" button
-		driver.findElement(By.id("login")).click();
+		// connect to shop site
+		landingPage.goTo();
+		// login using account credentials:
+		landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2025!");
 
 		// let's add explicit wait to allow the products to be loaded
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -99,7 +93,7 @@ public class StandAloneTest {
 		// grab the order number
 		String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		
+
 		// close the browser
 		driver.quit();
 	}
