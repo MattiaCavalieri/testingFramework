@@ -1,5 +1,6 @@
 package testingFramework;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -11,32 +12,23 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import testComponents.BaseTest;
 import testingFramework.pageobject.CartPage;
 import testingFramework.pageobject.CheckoutPage;
 import testingFramework.pageobject.ConfirmationPage;
 import testingFramework.pageobject.LandingPage;
 import testingFramework.pageobject.ProductCatalog;
 
-public class SubmitOrderTest {
-
-	public static void main(String[] args) {
+public class SubmitOrderTest extends BaseTest {
+	
+	@Test
+	public void submitOrder() throws IOException {
 
 		String productName = "ZARA COAT 3";
-
-		// open Chrome Driver
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-
-		// add implicity wait on global level to avoi issues
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		// maximise the browser
-		driver.manage().window().maximize();
-
-		LandingPage landingPage = new LandingPage(driver);
-		// connect to shop site
-		landingPage.goTo();
+		LandingPage landingPage = launchApplication();
 		// login using account credentials:
 		ProductCatalog productCatalog = landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2025!");
 		// List<WebElement> products = productCatalog.getProductList();
