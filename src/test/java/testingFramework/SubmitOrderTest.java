@@ -14,6 +14,7 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import testingFramework.pageobject.LandingPage;
+import testingFramework.pageobject.ProductCatalog;
 
 public class SubmitOrderTest {
 
@@ -29,6 +30,8 @@ public class SubmitOrderTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// maximise the browser
 		driver.manage().window().maximize();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 		LandingPage landingPage = new LandingPage(driver);
 		// connect to shop site
@@ -36,28 +39,20 @@ public class SubmitOrderTest {
 		// login using account credentials:
 		landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2025!");
 
-		// let's add explicit wait to allow the products to be loaded
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
-
-		// let's grab alla the products displayed in the dashboard
-		List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
+		ProductCatalog productCatalog = new ProductCatalog(driver);
+		List<WebElement> products = productCatalog.getProductList();
 
 		// let's iterate through all of the products to identify the product "ZARA COAT
 		// 3" using Java streams
-		WebElement selectedProduct = products.stream()
-				.filter(product -> product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst()
-				.orElse(null);
+		productCatalog.getProductByName(productName);
 
 		// click on "Add To Cart" button to add the selected product
-		selectedProduct.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+		productCatalog.addProductToCart(productName);
 
 		// verify that after the loading animation, the product has been added to cart
 		// we use explicit wait to wait for the toast message to appear
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
-
 		// wait for the animated icon to disappear
-		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
+		
 
 		// click on "Cart" button to see the Cart page
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
