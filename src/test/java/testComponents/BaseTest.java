@@ -7,12 +7,16 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import testingFramework.pageobject.LandingPage;
 
 public class BaseTest {
 
 	public WebDriver driver;
+	public LandingPage landingPage;
 
 	public WebDriver initializeDriver() throws IOException {
 
@@ -39,12 +43,18 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	
+
+	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 		WebDriver driver = initializeDriver();
-		LandingPage landingPage = new LandingPage(driver);
+		landingPage = new LandingPage(driver);
 		landingPage.goTo();
 		return landingPage;
+	}
+
+	@AfterMethod(alwaysRun = true)
+	public void closeSession() {
+		driver.quit();
 	}
 
 }

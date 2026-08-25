@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-24T22:11:55 CEST" name="Default suite" finished-at="2026-08-24T22:12:13 CEST" duration-ms="18082">
+  <suite started-at="2026-08-25T16:33:56 CEST" name="Error Handling Suite" finished-at="2026-08-25T16:34:38 CEST" duration-ms="41582">
     <groups>
+      <group name="ErrorsHandling">
+        <method signature="ErrorValidationsTest.productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" name="productErrorValidation" class="testingFramework.ErrorValidationsTest"/>
+      </group> <!-- ErrorsHandling -->
     </groups>
-    <test started-at="2026-08-24T22:11:55 CEST" name="Default test" finished-at="2026-08-24T22:12:13 CEST" duration-ms="18082">
-      <class name="testingFramework.SubmitOrderTest">
-        <test-method signature="submitOrder()[pri:0, instance:testingFramework.SubmitOrderTest@68999068]" started-at="2026-08-24T22:11:55 CEST" name="submitOrder" finished-at="2026-08-24T22:12:13 CEST" duration-ms="18055" status="PASS">
+    <test started-at="2026-08-25T16:33:56 CEST" name="Submit Order Test" finished-at="2026-08-25T16:33:57 CEST" duration-ms="30">
+    </test> <!-- Submit Order Test -->
+    <test started-at="2026-08-25T16:33:57 CEST" name="Error Validation Test" finished-at="2026-08-25T16:34:38 CEST" duration-ms="41338">
+      <class name="testingFramework.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:33:57 CEST" name="launchApplication" finished-at="2026-08-25T16:34:22 CEST" duration-ms="25437" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-      </class> <!-- testingFramework.SubmitOrderTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:34:22 CEST" name="productErrorValidation" finished-at="2026-08-25T16:34:37 CEST" duration-ms="15065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:34:37 CEST" name="closeSession" finished-at="2026-08-25T16:34:38 CEST" duration-ms="741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- testingFramework.ErrorValidationsTest -->
+    </test> <!-- Error Validation Test -->
+  </suite> <!-- Error Handling Suite -->
 </testng-results>
