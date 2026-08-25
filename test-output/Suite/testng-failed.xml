@@ -2,15 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="tests" name="Error Validation Test(failed)">
-    <groups>
-      <run>
-        <include name="ErrorsHandling"/>
-      </run>
-    </groups>
     <classes>
       <class name="testingFramework.ErrorValidationsTest">
         <methods>
-          <include name="productErrorValidation"/>
+          <include name="launchApplication"/>
+          <include name="closeSession"/>
+          <include name="loginErrorValidation"/>
         </methods>
       </class> <!-- testingFramework.ErrorValidationsTest -->
     </classes>

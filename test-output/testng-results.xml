@@ -1,30 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-25T16:33:56 CEST" name="Error Handling Suite" finished-at="2026-08-25T16:34:38 CEST" duration-ms="41582">
+  <suite started-at="2026-08-25T16:55:07 CEST" name="Suite" finished-at="2026-08-25T16:55:55 CEST" duration-ms="47960">
     <groups>
       <group name="ErrorsHandling">
-        <method signature="ErrorValidationsTest.productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" name="productErrorValidation" class="testingFramework.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" name="productErrorValidation" class="testingFramework.ErrorValidationsTest"/>
       </group> <!-- ErrorsHandling -->
     </groups>
-    <test started-at="2026-08-25T16:33:56 CEST" name="Submit Order Test" finished-at="2026-08-25T16:33:57 CEST" duration-ms="30">
-    </test> <!-- Submit Order Test -->
-    <test started-at="2026-08-25T16:33:57 CEST" name="Error Validation Test" finished-at="2026-08-25T16:34:38 CEST" duration-ms="41338">
-      <class name="testingFramework.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:33:57 CEST" name="launchApplication" finished-at="2026-08-25T16:34:22 CEST" duration-ms="25437" status="PASS">
+    <test started-at="2026-08-25T16:55:07 CEST" name="Submit Order Test" finished-at="2026-08-25T16:55:36 CEST" duration-ms="28902">
+      <class name="testingFramework.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:07 CEST" name="launchApplication" finished-at="2026-08-25T16:55:11 CEST" duration-ms="4303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:34:22 CEST" name="productErrorValidation" finished-at="2026-08-25T16:34:37 CEST" duration-ms="15065" status="PASS">
+        <test-method signature="submitOrder()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:11 CEST" name="submitOrder" finished-at="2026-08-25T16:55:29 CEST" duration-ms="17902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:29 CEST" name="closeSession" finished-at="2026-08-25T16:55:29 CEST" duration-ms="436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:29 CEST" name="launchApplication" finished-at="2026-08-25T16:55:34 CEST" duration-ms="4250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:34 CEST" name="orderHistoryTest" finished-at="2026-08-25T16:55:35 CEST" depends-on-methods="testingFramework.SubmitOrderTest.submitOrder" duration-ms="1514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@7714e963]" started-at="2026-08-25T16:55:35 CEST" name="closeSession" finished-at="2026-08-25T16:55:36 CEST" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- testingFramework.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+    <test started-at="2026-08-25T16:55:07 CEST" name="Error Validation Test" finished-at="2026-08-25T16:55:55 CEST" duration-ms="47960">
+      <class name="testingFramework.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:07 CEST" name="launchApplication" finished-at="2026-08-25T16:55:11 CEST" duration-ms="4377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:11 CEST" name="loginErrorValidation" finished-at="2026-08-25T16:55:15 CEST" duration-ms="3832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:15 CEST" name="closeSession" finished-at="2026-08-25T16:55:15 CEST" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:15 CEST" name="launchApplication" finished-at="2026-08-25T16:55:20 CEST" duration-ms="4372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:20 CEST" name="productErrorValidation" finished-at="2026-08-25T16:55:54 CEST" duration-ms="34395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productErrorValidation -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@77f1baf5]" started-at="2026-08-25T16:34:37 CEST" name="closeSession" finished-at="2026-08-25T16:34:38 CEST" duration-ms="741" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@130d63be]" started-at="2026-08-25T16:55:54 CEST" name="closeSession" finished-at="2026-08-25T16:55:55 CEST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
       </class> <!-- testingFramework.ErrorValidationsTest -->
     </test> <!-- Error Validation Test -->
-  </suite> <!-- Error Handling Suite -->
+  </suite> <!-- Suite -->
 </testng-results>
