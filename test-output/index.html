@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Purchase_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Purchase Test Suite</span>
+              <span class="suite-name border-passed">Purchase Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Purchase_Test_Suite" class="hide-methods failed suite-Purchase_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Purchase_Test_Suite -->
-                      <a href="#" panel-name="suite-Purchase_Test_Suite" class="show-methods failed suite-Purchase_Test_Suite"> (show)</a> <!-- show-methods failed suite-Purchase_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Purchase_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Purchase_Test_Suite" title="testingFramework.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder(test@test.it, Test@000, ADIDAS ORIGINAL)">submitOrder(test@test.it, Test@000, ADIDAS ORIGINAL)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Purchase_Test_Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,7 +103,12 @@
                     <div class="method-list-content passed suite-Purchase_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Purchase_Test_Suite" title="testingFramework.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder(mattiacavalieri@gmail.com, R1verside.2025!, ZARA COAT 3)">submitOrder(mattiacavalieri@gmail.com, R1verside.2025!, ZARA COAT 3)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Purchase_Test_Suite" title="testingFramework.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com})">submitOrder({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Purchase_Test_Suite" title="testingFramework.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it})">submitOrder({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Purchase_Test_Suite -->
@@ -132,47 +123,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Purchase_Test_Suite" class="panel Purchase_Test_Suite">
-          <div class="suite-Purchase_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testingFramework.SubmitOrderTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="submitOrder(test@test.it, Test@000, ADIDAS ORIGINAL)">
-                  </a> <!-- submitOrder(test@test.it, Test@000, ADIDAS ORIGINAL) -->
-                  <span class="method-name">submitOrder</span>
-                  <span class="parameters">(test@test.it,Test@000,ADIDAS ORIGINAL)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-jyv-c33=&quot;&quot; routerlink=&quot;/dashboard/cart&quot; class=&quot;btn btn-custom&quot; style=&quot;margin-top: -10px;&quot; tabindex=&quot;0&quot;&gt;...&lt;/button&gt; is not clickable at point (1685, 27). Other element would receive the click: &lt;div _ngcontent-jyv-c31=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=151.0.7922.170)
-Build info: version: &apos;4.45.0&apos;, revision: &apos;cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d34b343f9faa5fc936a998ed2347ac73, clickElement {id=f.BF2198FE0B1129EF09A54BF6285E7C5C.d.A50FC431ACBBCA91411F25CF49096EF0.e.63}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.170, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\matti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 7376, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 151.0.7922.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (d34b343f9faa5fc936a998ed2347ac73)] -&gt; css selector: [routerlink*=&apos;cart&apos;]]
-Session ID: d34b343f9faa5fc936a998ed2347ac73
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:225)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-	at abstractComponent.AbstractComponent.goToCartPage(AbstractComponent.java:47)
-	at testingFramework.SubmitOrderTest.submitOrder(SubmitOrderTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Purchase_Test_Suite-class-failed -->
           <div class="suite-Purchase_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -181,10 +131,18 @@ Session ID: d34b343f9faa5fc936a998ed2347ac73
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="submitOrder(mattiacavalieri@gmail.com, R1verside.2025!, ZARA COAT 3)">
-                  </a> <!-- submitOrder(mattiacavalieri@gmail.com, R1verside.2025!, ZARA COAT 3) -->
+                  <a name="submitOrder({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com})">
+                  </a> <!-- submitOrder({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com}) -->
                   <span class="method-name">submitOrder</span>
-                  <span class="parameters">(mattiacavalieri@gmail.com,R1verside.2025!,ZARA COAT 3)</span>
+                  <span class="parameters">({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="submitOrder({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it})">
+                  </a> <!-- submitOrder({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it}) -->
+                  <span class="method-name">submitOrder</span>
+                  <span class="parameters">({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -263,16 +221,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'submitOrder')
 data.setCell(0, 2, 'testingFramework.SubmitOrderTest')
-data.setCell(0, 3, 14579);
+data.setCell(0, 3, 15462);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'submitOrder')
 data.setCell(1, 2, 'testingFramework.SubmitOrderTest')
-data.setCell(1, 3, 1755);
+data.setCell(1, 3, 15249);
 window.suiteTableData['Purchase_Test_Suite']= { tableData: data, tableDiv: 'times-div-Purchase_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-Purchase_Test_Suite">
               </div> <!-- times-div-Purchase_Test_Suite -->
             </div> <!-- times-div -->
@@ -311,26 +269,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">submitOrder(mattiacavalieri@gmail.com, R1verside.2025!, ZARA COAT 3)</span>
-                <span class="method-start">4123 ms</span>
+                <span class="method-name">submitOrder({password=R1verside.2025!, product=ZARA COAT 3, email=mattiacavalieri@gmail.com})</span>
+                <span class="method-start">7252 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeSession</span>
-                <span class="method-start">18704 ms</span>
+                <span class="method-start">22722 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">18836 ms</span>
+                <span class="method-start">23113 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">submitOrder(test@test.it, Test@000, ADIDAS ORIGINAL)</span>
-                <span class="method-start">22359 ms</span>
+                <span class="method-name">submitOrder({password=Test@000, product=ADIDAS ORIGINAL, email=test@test.it})</span>
+                <span class="method-start">26726 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeSession</span>
-                <span class="method-start">24116 ms</span>
+                <span class="method-start">41979 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
