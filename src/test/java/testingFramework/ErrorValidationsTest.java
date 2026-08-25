@@ -11,7 +11,7 @@ import testingFramework.pageobject.ProductCatalog;
 
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test
+	@Test(groups = {"ErrorsHandling"})
 	public void loginErrorValidation() throws IOException {
 		// wrong password
 		landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2022!");
