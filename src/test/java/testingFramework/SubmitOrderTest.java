@@ -3,6 +3,7 @@ package testingFramework;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import testComponents.BaseTest;
@@ -16,19 +17,19 @@ public class SubmitOrderTest extends BaseTest {
 	
 	String productName = "ZARA COAT 3";
 	
-	@Test
-	public void submitOrder() throws IOException {
+	@Test(dataProvider = "getData", groups="Purchase")
+	public void submitOrder(String email, String password, String product) throws IOException {
 
 		// login using account credentials:
 		// using @BeforeMethod in "BaseTest" class we are initializing the driver and reach the url for the test invoking the method "initializeDriver()"
-		ProductCatalog productCatalog = landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2025!");
+		ProductCatalog productCatalog = landingPage.loginApplication(email, password);
 		
 		// let's iterate through all of the products to identify the product "ZARA COAT
 		// 3" using Java streams
-		productCatalog.getProductByName(productName);
+		productCatalog.getProductByName(product);
 
 		// click on "Add To Cart" button to add the selected product
-		productCatalog.addProductToCart(productName);
+		productCatalog.addProductToCart(product);
 
 		// verify that after the loading animation, the product has been added to cart
 		// we use explicit wait to wait for the toast message to appear
@@ -40,9 +41,9 @@ public class SubmitOrderTest extends BaseTest {
 		// the right product
 		// we use anyMatch to find any product that matches with our product name and
 		// store it in a boolean variable
-		cartPage.verifyProductDisplay(productName);
+		cartPage.verifyProductDisplay(product);
 		// eventually we use an assertion to validate the test
-		Boolean match = cartPage.verifyProductDisplay(productName);
+		Boolean match = cartPage.verifyProductDisplay(product);
 		Assert.assertTrue(match);
 
 		// go to Checkout
@@ -72,6 +73,11 @@ public class SubmitOrderTest extends BaseTest {
 		ProductCatalog productCatalog = landingPage.loginApplication("mattiacavalieri@gmail.com", "R1verside.2025!");
 		OrderPage orderPage = productCatalog.goToOrdersPage();
 		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return new Object[][] {{"mattiacavalieri@gmail.com", "R1verside.2025!", "ZARA COAT 3"}, {"test@test.it", "Test@000", "ADIDAS ORIGINAL"}};
 	}
 
 }
