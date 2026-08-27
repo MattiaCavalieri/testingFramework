@@ -1,7 +1,10 @@
 package testingFramework;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.List;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -79,19 +82,22 @@ public class SubmitOrderTest extends BaseTest {
 	}
 
 	@DataProvider
-	public Object[][] getData() {
+	public Object[][] getData() throws IOException {
 
-		HashMap<String, String> dataSet1 = new HashMap<String, String>();
-		dataSet1.put("email", "mattiacavalieri@gmail.com");
-		dataSet1.put("password", "R1verside.2025!");
-		dataSet1.put("product", "ZARA COAT 3");
+//		HashMap<String, String> dataSet1 = new HashMap<String, String>();
+//		dataSet1.put("email", "mattiacavalieri@gmail.com");
+//		dataSet1.put("password", "R1verside.2025!");
+//		dataSet1.put("product", "ZARA COAT 3");
+//
+//		HashMap<String, String> dataSet2 = new HashMap<String, String>();
+//		dataSet2.put("email", "test@test.it");
+//		dataSet2.put("password", "Test@000");
+//		dataSet2.put("product", "ADIDAS ORIGINAL");
+		
+		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir") + "/src/test/java/data/purchaseOrder.json");
 
-		HashMap<String, String> dataSet2 = new HashMap<String, String>();
-		dataSet2.put("email", "test@test.it");
-		dataSet2.put("password", "Test@000");
-		dataSet2.put("product", "ADIDAS ORIGINAL");
-
-		return new Object[][] { { dataSet1 }, { dataSet2 } };
+		return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
+	
 
 }
