@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-27T08:42:06 CEST" name="Purchase Test Suite" finished-at="2026-08-27T08:42:48 CEST" duration-ms="41995">
+  <suite started-at="2026-08-28T12:26:18 CEST" name="Suite" finished-at="2026-08-28T12:27:10 CEST" duration-ms="52612">
     <groups>
+      <group name="ErrorsHandling">
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" name="loginErrorValidation" class="testingFramework.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" name="productErrorValidation" class="testingFramework.ErrorValidationsTest"/>
+      </group> <!-- ErrorsHandling -->
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" name="submitOrder" class="testingFramework.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" name="submitOrder" class="testingFramework.SubmitOrderTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2026-08-27T08:42:06 CEST" name="Submit Order Test" finished-at="2026-08-27T08:42:48 CEST" duration-ms="41995">
-      <class name="testingFramework.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:07 CEST" name="launchApplication" finished-at="2026-08-27T08:42:14 CEST" duration-ms="7030" status="PASS">
+    <test started-at="2026-08-28T12:26:18 CEST" name="Error Validation Test" finished-at="2026-08-28T12:26:44 CEST" duration-ms="26759">
+      <class name="testingFramework.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:18 CEST" name="launchApplication" finished-at="2026-08-28T12:26:29 CEST" duration-ms="11381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:14 CEST" name="submitOrder" data-provider="getData" finished-at="2026-08-27T08:42:29 CEST" duration-ms="15431" status="PASS">
+        <test-method signature="loginErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:29 CEST" name="loginErrorValidation" finished-at="2026-08-28T12:26:30 CEST" duration-ms="1136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:30 CEST" name="closeSession" finished-at="2026-08-28T12:26:32 CEST" duration-ms="1249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:32 CEST" name="launchApplication" finished-at="2026-08-28T12:26:39 CEST" duration-ms="7313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:39 CEST" name="productErrorValidation" finished-at="2026-08-28T12:26:43 CEST" duration-ms="4579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.ErrorValidationsTest@30b6ffe0]" started-at="2026-08-28T12:26:43 CEST" name="closeSession" finished-at="2026-08-28T12:26:44 CEST" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- testingFramework.ErrorValidationsTest -->
+    </test> <!-- Error Validation Test -->
+    <test started-at="2026-08-28T12:26:18 CEST" name="Submit Order Test" finished-at="2026-08-28T12:27:10 CEST" duration-ms="52612">
+      <class name="testingFramework.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:26:18 CEST" name="launchApplication" finished-at="2026-08-28T12:26:26 CEST" duration-ms="7597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:26:26 CEST" name="submitOrder" data-provider="getData" finished-at="2026-08-28T12:26:36 CEST" duration-ms="10463" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,15 +57,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:29 CEST" name="closeSession" finished-at="2026-08-27T08:42:29 CEST" duration-ms="330" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:26:36 CEST" name="closeSession" finished-at="2026-08-28T12:26:39 CEST" duration-ms="3050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:29 CEST" name="launchApplication" finished-at="2026-08-27T08:42:33 CEST" duration-ms="3130" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:26:39 CEST" name="launchApplication" finished-at="2026-08-28T12:26:45 CEST" duration-ms="5724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:33 CEST" name="submitOrder" data-provider="getData" finished-at="2026-08-27T08:42:48 CEST" duration-ms="15325" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:26:45 CEST" name="submitOrder" data-provider="getData" finished-at="2026-08-28T12:27:01 CEST" duration-ms="16215" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,11 +76,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@74e52303]" started-at="2026-08-27T08:42:48 CEST" name="closeSession" finished-at="2026-08-27T08:42:48 CEST" duration-ms="293" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:27:01 CEST" name="closeSession" finished-at="2026-08-28T12:27:02 CEST" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:27:02 CEST" name="launchApplication" finished-at="2026-08-28T12:27:08 CEST" duration-ms="5739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:27:08 CEST" name="orderHistoryTest" finished-at="2026-08-28T12:27:10 CEST" depends-on-methods="testingFramework.SubmitOrderTest.submitOrder" duration-ms="1637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testingFramework.SubmitOrderTest@4470fbd6]" started-at="2026-08-28T12:27:10 CEST" name="closeSession" finished-at="2026-08-28T12:27:10 CEST" duration-ms="692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
       </class> <!-- testingFramework.SubmitOrderTest -->
     </test> <!-- Submit Order Test -->
-  </suite> <!-- Purchase Test Suite -->
+  </suite> <!-- Suite -->
 </testng-results>
