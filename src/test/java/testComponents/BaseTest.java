@@ -38,15 +38,17 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "/src/main/java/resources/GlobalData.properties");
 		properties.load(fis);
-		String browserName = properties.getProperty("browser");
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : properties.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 
