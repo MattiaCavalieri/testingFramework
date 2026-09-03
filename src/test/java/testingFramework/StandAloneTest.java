@@ -18,6 +18,7 @@ import testingFramework.pageobject.LandingPage;
 
 public class StandAloneTest {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		String productName = "ZARA COAT 3";

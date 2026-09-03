@@ -5,8 +5,6 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.sun.net.httpserver.Authenticator.Retry;
-
 import testComponents.BaseTest;
 import testingFramework.pageobject.CartPage;
 import testingFramework.pageobject.ProductCatalog;
